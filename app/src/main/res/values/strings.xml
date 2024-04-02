@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="set_manually">Set Manually</string>
+    <string name="schedule">Schedule</string>
+    <string name="manual_mode">Manual Mode</string>
+    <string name="set_knobs">Set Knobs</string>
+    <string name="set_temperature">Set Temperature</string>
+    <string name="schedule_mode">Schedule Mode</string>
+</resources>
