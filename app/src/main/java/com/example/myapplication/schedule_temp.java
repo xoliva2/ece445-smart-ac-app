@@ -28,7 +28,7 @@ public class schedule_temp extends AppCompatActivity {
         confirmScheduleTemp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(schedule_temp.this, MainActivity.class);
+                Intent intent = new Intent(schedule_temp.this, schedule_temp_time.class);
                 startActivity(intent);
             }
         });

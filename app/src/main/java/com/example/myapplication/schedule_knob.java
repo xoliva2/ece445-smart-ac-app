@@ -29,7 +29,7 @@ public class schedule_knob extends AppCompatActivity {
         confirmScheduleKnob.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(schedule_knob.this, MainActivity.class);
+                Intent intent = new Intent(schedule_knob.this, schedule_knob_time.class);
                 startActivity(intent);
             }
         });
