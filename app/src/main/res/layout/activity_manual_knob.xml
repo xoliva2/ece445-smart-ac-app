@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".manual_knob">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="154dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="129dp"
+        android:layout_marginBottom="349dp"
+        android:text="@string/manual_mode"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/hiCoolManual"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/hiCoolManual"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="428dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="42dp"
+        android:text="@string/hi_cool"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/loCoolManual"
+        app:layout_constraintEnd_toStartOf="@+id/hiFanManual"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/loCoolManual"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="35dp"
+        android:text="@string/lo_cool"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/offManual"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hiCoolManual" />
+
+    <Button
+        android:id="@+id/hiFanManual"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="428dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="42dp"
+        android:text="@string/hi_fan"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/offManual"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/hiCoolManual"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/offManual"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="39dp"
+        android:text="@string/off"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/loCoolManual"
+        app:layout_constraintTop_toBottomOf="@+id/hiFanManual" />
+
+    <Button
+        android:id="@+id/confirmManualKnob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="151dp"
+        android:layout_marginTop="63dp"
+        android:layout_marginEnd="151dp"
+        android:layout_marginBottom="100dp"
+        android:text="@string/confirm"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/offManual" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".schedule_knob">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="129dp"
+        android:layout_marginBottom="349dp"
+        android:text="@string/schedule_mode"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/hiCoolSchedule"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/hiCoolSchedule"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="428dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="42dp"
+        android:text="@string/hi_cool"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/loCoolSchedule"
+        app:layout_constraintEnd_toStartOf="@+id/hiFanSchedule"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/loCoolSchedule"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="35dp"
+        android:text="@string/lo_cool"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/offSchedule"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hiCoolSchedule" />
+
+    <Button
+        android:id="@+id/hiFanSchedule"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="428dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="42dp"
+        android:text="@string/hi_fan"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/offSchedule"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/hiCoolSchedule"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/offSchedule"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="39dp"
+        android:text="@string/off"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/loCoolSchedule"
+        app:layout_constraintTop_toBottomOf="@+id/hiFanSchedule" />
+
+    <Button
+        android:id="@+id/confirmScheduleKnob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="151dp"
+        android:layout_marginTop="63dp"
+        android:layout_marginEnd="151dp"
+        android:layout_marginBottom="100dp"
+        android:text="@string/confirm"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/offSchedule" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

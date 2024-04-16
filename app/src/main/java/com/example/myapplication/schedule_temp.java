@@ -11,36 +11,26 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class manualSet extends AppCompatActivity {
+public class schedule_temp extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_manual_set);
+        setContentView(R.layout.activity_schedule_temp);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        Button confirmScheduleTemp = findViewById(R.id.confirmScheduleTemp);
 
-        Button manualKnobButton = findViewById(R.id.manualKnob);
-        Button manualTemperatureButton = findViewById(R.id.manualTemp);
-
-        manualKnobButton.setOnClickListener(new View.OnClickListener() {
+        confirmScheduleTemp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(manualSet.this, manual_knob.class);
+                Intent intent = new Intent(schedule_temp.this, MainActivity.class);
                 startActivity(intent);
             }
         });
-        manualTemperatureButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent  intent = new Intent(manualSet.this, manual_temp.class);
-                startActivity(intent);
-            }
-        });
-
     }
 }

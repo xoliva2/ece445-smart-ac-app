@@ -6,4 +6,16 @@
     <string name="set_knobs">Set Knobs</string>
     <string name="set_temperature">Set Temperature</string>
     <string name="schedule_mode">Schedule Mode</string>
+    <string name="hi_cool">Hi Cool</string>
+    <string name="lo_cool">Lo Cool</string>
+    <string name="hi_fan">Hi Fan</string>
+    <string name="off">Off</string>
+    <string name="confirm">Confirm</string>
+    <string name="confirmManualTemp">Confirm</string>
+    <string name="enter_desired_temperature_below">Enter desired temperature below</string>
+    <string name="enter_desired_temperature_below_in_fahrenheit">Enter desired temperature below in fahrenheit</string>
+    <string name="start_time">Start Time</string>
+    <string name="end_time">End Time</string>
+    <string name="finalize_schedule">Finalize Schedule</string>
+    <string name="confirm_schedule">Confirm Schedule</string>
 </resources>
