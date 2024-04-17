@@ -23,6 +23,7 @@ public class schedule_temp extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
         Button confirmScheduleTemp = findViewById(R.id.confirmScheduleTemp);
 
         confirmScheduleTemp.setOnClickListener(new View.OnClickListener() {
