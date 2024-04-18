@@ -23,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+
+
         Button manualButton = findViewById(R.id.manual);
         Button scheduleButton = findViewById(R.id.schedule);
 

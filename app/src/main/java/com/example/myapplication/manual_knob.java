@@ -23,14 +23,31 @@ public class manual_knob extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        Button confirmManualKnob = findViewById(R.id.confirmManualKnob);
 
+        ValuesClass valuesClass;
+        valuesClass = new ValuesClass(1);
+
+        Button confirmManualKnob = findViewById(R.id.confirmManualKnob);
+        Button hiCoolManual = findViewById(R.id.hiCoolManual);
+        Button hiFanManual = findViewById(R.id.hiFanManual);
+        Button loCoolManual = findViewById(R.id.loCoolManual);
+        Button offACManual = findViewById(R.id.offManual);
         confirmManualKnob.setOnClickListener(new View.OnClickListener() {
             @Override
+
             public void onClick(View v) {
                 Intent intent = new Intent(manual_knob.this, MainActivity.class);
                 startActivity(intent);
             }
         });
+        hiCoolManual.setOnClickListener(new View.OnClickListener() {
+            @Override
+
+            public void onClick(View v) {
+                valuesClass.setManualKnobSetting(1);
+
+            }
+        });
+
     }
 }
