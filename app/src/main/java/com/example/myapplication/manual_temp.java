@@ -13,6 +13,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.Objects;
+
 public class manual_temp extends AppCompatActivity {
 
     @Override
@@ -32,6 +34,7 @@ public class manual_temp extends AppCompatActivity {
         text = (EditText)findViewById(R.id.manualTempText);
 
 
+
         Button confirmManualTemp = findViewById(R.id.confirmManualTemp);
 
         confirmManualTemp.setOnClickListener(new View.OnClickListener() {
@@ -39,7 +42,7 @@ public class manual_temp extends AppCompatActivity {
             public void onClick(View v) {
                 String tempString = text.getText().toString();
 
-                Intent intent = new Intent(manual_temp.this, confirmationActivity.class);
+                Intent intent = new Intent(manual_temp.this, MainActivity.class);
                 intent.putExtra("manualTempInt",Integer.parseInt(tempString));
                 intent.putExtra("mode", "manualTemp");
                 startActivity(intent);

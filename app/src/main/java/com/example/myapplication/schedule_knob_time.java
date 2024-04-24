@@ -40,7 +40,7 @@ public class schedule_knob_time extends AppCompatActivity {
                 String stringStart = timeStart.getText().toString();
                 String stringEnd = timeEnd.getText().toString();
 
-                Intent intent = new Intent(schedule_knob_time.this, confirmationActivity.class);
+                Intent intent = new Intent(schedule_knob_time.this, MainActivity.class);
 
                 intent.putExtra("knobStart", stringStart);
                 intent.putExtra("knobEnd", stringEnd);

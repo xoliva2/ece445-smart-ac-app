@@ -39,7 +39,7 @@ private int scheduleTempSetting = 69;
                 String stringStart = timeStart.getText().toString();
                 String stringEnd = timeEnd.getText().toString();
 
-                Intent intent = new Intent(schedule_temp_time.this, confirmationActivity.class);
+                Intent intent = new Intent(schedule_temp_time.this, MainActivity.class);
 
                 intent.putExtra("tempStart", stringStart);
                 intent.putExtra("tempEnd", stringEnd);

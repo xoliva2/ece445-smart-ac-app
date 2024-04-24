@@ -12,7 +12,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class manual_knob extends AppCompatActivity {
-    private int knobSettingInt = 0;
+    int knobSettingInt = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,7 +59,7 @@ public class manual_knob extends AppCompatActivity {
             @Override
 
             public void onClick(View v) {
-                knobSettingInt = 3;
+                knobSettingInt = 0;
 
             }
         });
@@ -67,7 +67,7 @@ public class manual_knob extends AppCompatActivity {
             @Override
 
             public void onClick(View v) {
-                Intent intent = new Intent(manual_knob.this, confirmationActivity.class);
+                Intent intent = new Intent(manual_knob.this, MainActivity.class);
                 intent.putExtra("manualKnobInt",knobSettingInt);
                 intent.putExtra("mode", "manualKnob");
                 startActivity(intent);
