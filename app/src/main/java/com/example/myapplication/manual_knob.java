@@ -90,9 +90,10 @@ public class manual_knob extends AppCompatActivity {
 
             public void onClick(View v) {
                 Intent intent = new Intent(manual_knob.this, MainActivity.class);
-                intent.putExtra("manualKnobInt",knobSettingInt);
+                intent.putExtra("knobSetting",knobSettingInt);
                 intent.putExtra("mode", "manualKnob");
                 sendData(String.valueOf(knobSettingInt));
+
                 startActivity(intent);
             }
         });

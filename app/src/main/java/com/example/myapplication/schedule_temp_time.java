@@ -67,6 +67,13 @@ public class schedule_temp_time extends AppCompatActivity {
                 String endHour = endParts[0];  // Convert the hour to an integer
                 String endMinute = endParts[1];  // Convert the minute to an integer
 
+                if (startHour.length() == 1){
+                    startHour = "0" + startHour;
+                }
+                if (endHour.length() == 1){
+                    endHour = "0" + endHour;
+                }
+
                 String timeConcat = startHour + startMinute + endHour + endMinute;
                 // TODO: check if format is 0921 or 921
 
