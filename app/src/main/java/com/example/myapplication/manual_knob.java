@@ -92,7 +92,7 @@ public class manual_knob extends AppCompatActivity {
                 Intent intent = new Intent(manual_knob.this, MainActivity.class);
                 intent.putExtra("manualKnobInt",knobSettingInt);
                 intent.putExtra("mode", "manualKnob");
-                sendData();
+                sendData(String.valueOf(knobSettingInt));
                 startActivity(intent);
             }
         });
@@ -113,7 +113,16 @@ public class manual_knob extends AppCompatActivity {
         }
     }
 
-    private void sendData() {
+    //  the way data transfer will work is that the first item character of the string will
+    //  dictate if the action is manual or schedule ( 0 for manual, 1 for schedule)
+    //  the next character will dictate whether the action is changing by way of the knob or
+    //  setting a temperature ( 0 for knob, 1 for temperature)
+    //  thus the string will look like so...
+    //  [manual or schedule] [knob or temperature] [knob setting num. or degrees fahrenheit] [time frame]
+    //          1                       1                       72                              02121109
+    //  the above string, all together, will look like "117202121109", which means that the
+    //  instruction is a scheduled temperature instruction from 2:12 to 11:09 that is set to 72 degrees fahrenheit
+    private void sendData(String knobSettingString) {
         // Set up a thread to send the data in the background
         new Thread(new Runnable() {
             @Override
@@ -124,6 +133,7 @@ public class manual_knob extends AppCompatActivity {
                     Socket socket = new Socket("192.168.4.1", 80);
                     PrintWriter out = new PrintWriter(socket.getOutputStream());
 
+                    String dataString = "00" + knobSettingString;
                     // Send the data
                     out.println("Hello, ESP32!");
                     out.flush();
