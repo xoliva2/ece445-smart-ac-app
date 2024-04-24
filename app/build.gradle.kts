@@ -37,4 +37,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+//    compile 'com.amitshekhar.android:android-networking:1.0.2'
+
 }
