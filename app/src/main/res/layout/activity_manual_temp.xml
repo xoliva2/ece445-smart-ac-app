@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="136dp"
-        android:layout_marginTop="428dp"
+        android:layout_marginTop="38dp"
         android:layout_marginEnd="136dp"
         android:layout_marginBottom="250dp"
         android:text="@string/confirmManualTemp"
@@ -21,8 +21,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.32" />
+        app:layout_constraintTop_toBottomOf="@+id/manualTempText" />
 
     <TextView
         android:id="@+id/textView"
@@ -55,8 +54,9 @@
         android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/confirmManualTemp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"/>
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
         android:id="@+id/textView3"

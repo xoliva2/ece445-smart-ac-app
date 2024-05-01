@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,12 +25,18 @@ public class schedule_temp extends AppCompatActivity {
             return insets;
         });
 
+        EditText text;
+        String tempValue;
+        text = (EditText)findViewById(R.id.scheduleTempText);
+
         Button confirmScheduleTemp = findViewById(R.id.confirmScheduleTemp);
 
         confirmScheduleTemp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String tempString = text.getText().toString();
                 Intent intent = new Intent(schedule_temp.this, schedule_temp_time.class);
+                intent.putExtra("scheduleTempInt",Integer.parseInt(tempString));
                 startActivity(intent);
             }
         });
