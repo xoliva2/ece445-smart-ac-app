@@ -134,9 +134,9 @@ public class manual_knob extends AppCompatActivity {
                     Socket socket = new Socket("192.168.4.1", 80);
                     PrintWriter out = new PrintWriter(socket.getOutputStream());
 
-                    String dataString = "00" + knobSettingString;
+                    String dataString = "0,0" + "," + knobSettingString;
                     // Send the data
-                    out.println("Hello, ESP32!");
+                    out.println(dataString);
                     out.flush();
                     Log.d("Sending Data", "Data Sent!");
 

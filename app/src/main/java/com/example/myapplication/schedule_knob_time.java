@@ -126,7 +126,7 @@ public class schedule_knob_time extends AppCompatActivity {
                     Socket socket = new Socket("192.168.4.1", 80);
                     PrintWriter out = new PrintWriter(socket.getOutputStream());
 
-                    String dataString = "10" + knobSettingString + timeString;
+                    String dataString = "1,0" + "," + knobSettingString + "," + timeString;
                     // Send the data
                     out.println(dataString);
                     out.flush();

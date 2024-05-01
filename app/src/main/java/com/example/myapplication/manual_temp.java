@@ -107,7 +107,7 @@ public class manual_temp extends AppCompatActivity {
                     Socket socket = new Socket("192.168.4.1", 80);
                     PrintWriter out = new PrintWriter(socket.getOutputStream());
 
-                    String dataString = "01" + temperature;
+                    String dataString = "0,1" + "," + temperature;
                     // Send the data
                     out.println(dataString);
                     out.flush();

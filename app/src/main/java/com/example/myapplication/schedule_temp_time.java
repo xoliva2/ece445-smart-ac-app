@@ -127,8 +127,8 @@ public class schedule_temp_time extends AppCompatActivity {
                     PrintWriter out = new PrintWriter(socket.getOutputStream());
 
                     // Send the data
-                    String dataString = "11" + temperatureString + timeString;
-                    out.println("Hello, ESP32!");
+                    String dataString = "1,1" + "," + temperatureString + ',' + timeString;
+                    out.println(dataString);
                     out.flush();
                     Log.d("Sending Data", "Data Sent!");
 
